@@ -15,7 +15,7 @@ public class Main {
                 .setOAuthAccessTokenSecret("xxxxxxxxxxxxxxxxxxxxxxxx");
         TwitterFactory tf = new TwitterFactory(cb.build());
         Twitter twitter = tf.getInstance();
-        ResponseList<Status> homeTimeline = twitter.getHomeTimeline(new Paging(1, 10000000));
+        ResponseList<Status> homeTimeline = twitter.getHomeTimeline(new Paging(1, 20));
         System.out.println(homeTimeline.size());
         for (Status status : homeTimeline) {
             if (status.getText().contains("ام")) {
